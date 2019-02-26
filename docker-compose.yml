@@ -1,0 +1,13 @@
+version: '2' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  angular: # name of the first service
+    image: ampersandlabs/randi-africa-frontend-v2
+    build: . # specify the directory of the Dockerfile
+    ports:
+      - "4200:4200" # specify port forwarding
+      - "49153:49153"      
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
