@@ -1,0 +1,34 @@
+
+<div class="form" (click)="flush()">
+    <p *ngIf="failed"> Invalid username or password</p>
+    <br>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-group">
+      
+      <span *ngIf="isSubmitted && formControls.username.errors" class="help-block">
+          <small *ngIf="formControls.username.errors.required">This field is required</small>
+      </span>
+      <input type="email" class="form-control" formControlName="username" aria-describedby="emailHelp" placeholder="username or email">
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors }"></p>
+      
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      
+      <span *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+          <small *ngIf="formControls.password.errors.required">Password is required</small>
+      </span>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }"></p>
+    
+      
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-info">
+        Login <i class="fa fa-sign-in"></i> 
+    </button>
+  </form>
+</div>
