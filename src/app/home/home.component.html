@@ -1,0 +1,14 @@
+<div>
+    <h1 class="name">Welcome to Randi</h1>
+    <p>
+      An Ampersand Contact mobile App designed to help people easily exchange contacts during tech events
+      <br>
+      <br>
+      <button *ngIf="!status"class="btn btn-primary my-2 my-sm-0" routerLink="login">
+          <i class="fa fa-sign-in"></i> Signin to get Started 
+      </button>
+      <button *ngIf="status" class="btn btn-primary my-2 my-sm-0" routerLink="login">
+          <i class="fa fa-sign-in"></i> Signin to get Started 
+      </button>
+    </p>
+  </div>
