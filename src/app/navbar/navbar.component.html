@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-secondary">
+    <a class="navbar-brand" routerLink=""><i class="fa fa-slideshare"></i> Randi</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a style="color:black" routerLink="">Home</a>
+        </li>
+      </ul> 
+
+      <div *ngIf="username"><i class="fa fa-user"></i> {{ username }}</div>
+      <div *ngIf="!username" ><a routerLink="login" style="color:white"> LOGIN <i class="fa fa-sign-in"></i></a></div>
+
+  </nav>
