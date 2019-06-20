@@ -1,0 +1,16 @@
+span.company-contact span, a{
+    padding-left: 25px;
+    color:white
+}
+img {
+    width: 350px;
+    height: 350px;
+    margin-right: 20px;
+
+}
+div.project-head {
+    text-align: center;
+}
+h4{
+    color: rgb(248, 242, 242);
+}

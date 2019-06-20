@@ -1,3 +1,39 @@
-<p>
-  project-detail works!
-</p>
+<div class="container">
+  <div class="project-head">
+    <h3>{{ project.name }}</h3>
+    <h6>by {{ project.company.name }} 
+      <small>( {{ project.company.city }}, {{ project.company.country }} )</small> 
+    
+      <span class="company-contact">
+        <span><a href="mailto:{{ project.company.email }}"></a><i class="fa fa-envelope"></i> email</span>
+        <span><i class="fa fa-phone"></i> Phone: {{ project.company.phone }} </span>
+      </span>
+    </h6>
+  </div>
+
+  <hr>
+  <div class="container row">
+    <div class="col-5">
+        <img src="{{ project.logo }}" class="img" alt="Image Missing">
+    </div>
+  <div class="content col">
+  <h4>Project Idea Introduction</h4>
+  <p>{{ project.idea_introduction }}</p>
+
+  <h4>Problem And Solution</h4>
+  <p>{{ project.problem_and_solution }}</p>
+
+  <h4>Market And Competition Strategy</h4>
+  <p>{{ project.market_strategy }}</p>
+  <p>{{ project.competition_strategy }}</p>
+
+  <!-- <h4>Stats And Capital</h4>
+  <p>{{ project.idea_introduction }}</p> -->
+
+  <h4>Summary</h4>
+  <p>{{ project.summary }}</p>
+  <!-- capital -->
+  <!-- market -->
+  <!-- how to spend -->
+  </div></div>
+</div>

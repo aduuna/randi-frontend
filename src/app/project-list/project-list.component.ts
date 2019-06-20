@@ -8,14 +8,14 @@ import { ProjectService } from '../project.service'
 })
 export class ProjectListComponent implements OnInit {
 
-  public projects = {};
+  public projects;
 
   constructor(private _projectService: ProjectService) { }
 
   ngOnInit() {
     this._projectService.getProjects()
     .subscribe(
-      res => {this.projects = res},
+      res => {this.projects = res; console.log(this.projects)},
       (err) => console.log('Error Prj ', err),
       () => console.log('done')
     )

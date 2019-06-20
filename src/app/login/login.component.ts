@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res['token'])
       },
       (err)=>{this.failed = true},
-      ()=>{this.router.navigateByUrl('')}
+      ()=>{this.router.navigateByUrl('projects')}
     )
   }
 

@@ -20,10 +20,6 @@ export class AuthService {
     return this.http.post(url, params)
   }
 
-  public login(userInfo: User){
-    localStorage.setItem('token', this.token);
-  }
-
   public isLoggedIn(){
     return localStorage.getItem('token') !== null;
 

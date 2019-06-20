@@ -1,0 +1,23 @@
+ul{
+    list-style-type: none;
+}
+small{
+    position: absolute;;
+    right: 5px;
+}
+li {
+    position: relative;
+    margin: 20px;
+    border-left: 10px solid rgb(243, 138, 138);
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: #565f6af5
+}
+li:hover{
+    background-color: #37506ee7
+}
+a{
+    color: white;
+    text-decoration: none;
+}

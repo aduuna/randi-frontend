@@ -44,7 +44,7 @@ import { AuthGuard } from './auth.guard'
         canActivate: [AuthGuard]
       },
       {
-        path: 'detail',
+        path: 'projects/detail/:id',
         component: ProjectDetailComponent,
         canActivate: [AuthGuard]
       }
