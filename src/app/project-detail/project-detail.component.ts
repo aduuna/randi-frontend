@@ -13,7 +13,12 @@ export class ProjectDetailComponent implements OnInit {
   constructor(private _projectService: ProjectService) { }
 
   ngOnInit() {
-    this._projectService.getProjects().then(data => this.projects = data)
+    this._projectService.getProjects()
+    .subscribe(
+      res => {this.projects = res},
+      (err) => console.log('Error Prj ', err),
+      () => console.log('done')
+    )
   }
 
 }

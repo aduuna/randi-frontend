@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private _authService: AuthService) { }
 
   ngOnInit() {
-    if(this._authService.isLoggedIn){
+    if(this._authService.isLoggedIn()){
       this.status = true;
     }
   }

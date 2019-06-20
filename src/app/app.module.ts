@@ -52,7 +52,7 @@ import { AuthGuard } from './auth.guard'
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ProjectService, AuthService],
+  providers: [ProjectService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,9 +12,9 @@ export class NavbarComponent implements OnInit {
   constructor(private _authService: AuthService) { }
 
   ngOnInit() {
-    if(this._authService.isLoggedIn){
-      console.log(localStorage.getItem('user'));
-      this.username = JSON.parse(localStorage.getItem('user'))
+    if(this._authService.isLoggedIn()){
+      console.log(localStorage.getItem("token"));
+      this.username = JSON.parse(localStorage.getItem('user')).username
     }
 
   }
